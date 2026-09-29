@@ -31,7 +31,7 @@ func main() {
 
 ### Read bindata with directories in filename
 
-The [source.Regex](https://github.com/golang-migrate/migrate/blob/master/source/parse.go#L22C1-L23C1) used the above assumes that the bindata filenames were generated from the same directory that the files exist in, if your bindata is in run via Makefile targets, or other automated setups or just outside of the current directory, the default will fail. To enable this, you must overwrite the regex to allow for directories.
+The default [source.Regex](https://github.com/golang-migrate/migrate/blob/master/source/parse.go#L22C1-L23C1) used in the above example assumes that the go-bindata filenames were generated from the same directory that the files exist in, if your go-bindata is in run via Makefile targets, or other automated setups or just outside of the current directory, the default will fail. To enable this, you must overwrite the regex to allow for directories.
 
 ```shell
 go get -u github.com/jteeuwen/go-bindata/...
